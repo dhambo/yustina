@@ -1,0 +1,113 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNgmIUiC1PAiKJicWnrL1XL",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/dhambo/yustina/blob/main/soal%2001\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Syq_27Lzts_f",
+        "outputId": "1f7a4d73-9fee-4550-81d8-cfc745991285"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "=== INPUT NILAI MAHASISWA ===\n",
+            "Masukkan nilai mahasiswa ke-1: 90\n",
+            "Masukkan nilai mahasiswa ke-2: 80\n",
+            "Masukkan nilai mahasiswa ke-3: 70\n",
+            "Masukkan nilai mahasiswa ke-4: 60\n",
+            "Masukkan nilai mahasiswa ke-5: 50\n",
+            "Masukkan nilai mahasiswa ke-6: 90\n",
+            "Masukkan nilai mahasiswa ke-7: 80\n",
+            "Masukkan nilai mahasiswa ke-8: 70\n",
+            "Masukkan nilai mahasiswa ke-9: 60\n",
+            "Masukkan nilai mahasiswa ke-10: 50\n",
+            "\n",
+            "=== HASIL ANALISIS NILAI ===\n",
+            "Daftar Nilai : [90, 80, 70, 60, 50, 90, 80, 70, 60, 50]\n",
+            "Nilai Tertinggi : 90\n",
+            "Nilai Terendah : 50\n",
+            "Rata-rata Nilai : 70.0\n",
+            "Jumlah Mahasiswa Lulus : 8\n",
+            "Jumlah Mahasiswa Tidak Lulus : 2\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Program Pengelolaan Nilai Mahasiswa Menggunakan Array\n",
+        "\n",
+        "nilai = []\n",
+        "\n",
+        "print(\"=== INPUT NILAI MAHASISWA ===\")\n",
+        "\n",
+        "# Input 10 nilai\n",
+        "for i in range(10):\n",
+        "    n = int(input(f\"Masukkan nilai mahasiswa ke-{i+1}: \"))\n",
+        "    nilai.append(n)\n",
+        "\n",
+        "# Nilai tertinggi dan terendah\n",
+        "nilai_tertinggi = max(nilai)\n",
+        "nilai_terendah = min(nilai)\n",
+        "\n",
+        "# Rata-rata\n",
+        "rata_rata = sum(nilai) / len(nilai)\n",
+        "\n",
+        "# Jumlah mahasiswa lulus\n",
+        "lulus = 0\n",
+        "for n in nilai:\n",
+        "    if n >= 60:\n",
+        "        lulus += 1\n",
+        "\n",
+        "tidak_lulus = len(nilai) - lulus\n",
+        "\n",
+        "# Output\n",
+        "print(\"\\n=== HASIL ANALISIS NILAI ===\")\n",
+        "print(\"Daftar Nilai :\", nilai)\n",
+        "print(\"Nilai Tertinggi :\", nilai_tertinggi)\n",
+        "print(\"Nilai Terendah :\", nilai_terendah)\n",
+        "print(\"Rata-rata Nilai :\", rata_rata)\n",
+        "print(\"Jumlah Mahasiswa Lulus :\", lulus)\n",
+        "print(\"Jumlah Mahasiswa Tidak Lulus :\", tidak_lulus)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "qAGeNWGJwKeU"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
